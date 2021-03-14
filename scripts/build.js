@@ -8,9 +8,8 @@ async function build(target) {
   await execa('rollup', [
     '-c',
     '--environment',
-    `TARGET:${target}`,
-    { stdio: 'inherit' } // 子进程打包信息共享给父进程
-  ])
+    `TARGET:${target}` // 子进程打包信息共享给父进程
+  ], { stdio: 'inherit' })
 }
 
 function runParallel(targets, iteratorFn) {
