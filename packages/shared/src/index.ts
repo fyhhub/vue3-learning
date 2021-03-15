@@ -1,3 +1,1 @@
-export default {
-  a: 1
-}
+export const isObject = value => typeof value === 'object' && value !== null;
